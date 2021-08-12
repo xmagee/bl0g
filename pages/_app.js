@@ -20,7 +20,6 @@ export default function App({ Component, props }) {
 				{[
 					{ title: 'Home', href: '/' },
 					{ title: 'Blogs', href: '/blogs' },
-					{ title: 'Projects', href: '/projects' },
 					{ title: 'Github', href: 'https://github.com/xmagee' },
 					{ title: 'Resume', href: 'https://alexmagee.com' },
 				].map((link, linkIndex) => (
@@ -29,7 +28,7 @@ export default function App({ Component, props }) {
 							<a style={{ marginLeft: 5, marginRight: 5 }}>{link.title}</a>
 						</Link>
 
-						{linkIndex !== 4 && ('|')}
+						{linkIndex !== 3 && ('|')}
 					</>
 				))}
 			</nav>

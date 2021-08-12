@@ -15,7 +15,7 @@ export default function Blogs() {
                 ].map((link, linkIndex) => (
                     <li key={linkIndex}>
                         <Link href={link.href}>
-                            <a>{link.title}</a>
+                            <a>blog # {linkIndex + 1} : {link.title}</a>
                         </Link>
                     </li>
                 ))}

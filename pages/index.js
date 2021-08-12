@@ -4,7 +4,7 @@ import {
 	react_gists, 
 	resume_site, 
 	vscode_theme 
-} from './assets'
+} from '../assets'
 
 export default function Home() {
 	return (

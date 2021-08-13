@@ -10,11 +10,7 @@ export default function App({ Component, props }) {
 				<h1>./xmagee</h1>
 			</header>
 
-			<hr />
-
 			<MainNavbar />
-
-			<hr />
 
 			<Component {...props} />
 		</>

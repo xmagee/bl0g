@@ -5,7 +5,7 @@ export default function MainNavbar() {
         <nav style={{ 
             display: 'flex', 
             flexDirection: 'row', 
-            justifyContent: 'center',
+            justifyContent: 'center'
         }}>
             {[
                 { title: 'Home', href: '/' },

@@ -4,8 +4,16 @@ hr {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+nav {
+    outline: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
 .project-card {
     outline: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
     padding-top: 5px; 
     padding-bottom: 5px;
     padding-left: 5px; 

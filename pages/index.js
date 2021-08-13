@@ -9,14 +9,16 @@ import {
 export default function Home() {
 	return (
 		<>
-			<p style={{ display: 'flex', justifyContent: 'center' }}>
-				<h4>Projects</h4>
-			</p>
+			<span className='page-title-subtitle-container'>
+				<p>
+					<h4>Projects</h4>
+				</p>
 
-			<p style={{ display: 'flex', justifyContent: 'center' }}>
-                Very cool. 😎
-            </p>
-
+				<p>
+					Very cool. 😎
+				</p>
+			</span>
+			
 			{[
 				{
 					title: 'React Gists', 

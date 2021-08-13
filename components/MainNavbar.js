@@ -2,11 +2,7 @@ import Link from 'next/link'
 
 export default function MainNavbar() {
     return (
-        <nav style={{ 
-            display: 'flex', 
-            flexDirection: 'row', 
-            justifyContent: 'center'
-        }}>
+        <nav className='main-navbar'>
             {[
                 { title: 'Home', href: '/' },
                 { title: 'Blogs', href: '/blogs' },

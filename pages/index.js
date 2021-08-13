@@ -13,6 +13,10 @@ export default function Home() {
 				<h4>Projects</h4>
 			</p>
 
+			<p style={{ display: 'flex', justifyContent: 'center' }}>
+                Very cool. 😎
+            </p>
+
 			{[
 				{
 					title: 'React Gists', 

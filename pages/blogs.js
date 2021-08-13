@@ -4,8 +4,12 @@ export default function Blogs() {
     return (
         <>
             <p style={{ display: 'flex', justifyContent: 'center' }}>
-				<h4>Blogs</h4>
+				<h4>Blogs</h4> <br />    
 			</p>
+
+            <p style={{ display: 'flex', justifyContent: 'center' }}>
+                SORT BY [BlogDate] DESC;
+            </p>
 
             <ul style={{
                 listStyleType: 'square'

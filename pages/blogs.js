@@ -15,11 +15,12 @@ export default function Blogs() {
 
             <ul className='blog-ul'>
                 {[ // { link: '', title: '' }
+                    { href: '/blog/2', title: 'blog improvements, maybe done?' },
                     { href: '/blog/1', title: 'testing' }, 
                 ].map((link, linkIndex) => (
                     <li key={linkIndex}>
                         <Link href={link.href}>
-                            <a>blog # {linkIndex + 1} : {link.title}</a>
+                            <a>{link.title}</a>
                         </Link>
                     </li>
                 ))}

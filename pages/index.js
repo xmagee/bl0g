@@ -3,7 +3,8 @@ import {
 	discord_bot,
 	react_gists, 
 	resume_site, 
-	vscode_theme 
+	vscode_theme, 
+	js13k2021
 } from '../assets'
 
 export default function Home() {
@@ -20,6 +21,22 @@ export default function Home() {
 			</span>
 			
 			{[
+				// {
+				// 	title: '', 
+				// 	descr: '', 
+				// 	image: , 
+				// 	image_alt: '', 
+				// 	source: '', 
+				// 	demo: ''
+				// },
+				{
+					title: 'Asteriods13k (js13k 2021)', 
+					descr: 'A game that I made for the js13k game jam', 
+					image: js13k2021, 
+					image_alt: 'Asteriods game made with Javascript.', 
+					source: 'https://github.com/xmagee/13k-asteroids', 
+					demo: 'https://github.com/xmagee/13k-asteroids'
+				},
 				{
 					title: 'React Gists', 
 					descr: 'A simple React webapp that showcases Reactjs code snippets that are cool and/or useful.', 

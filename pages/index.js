@@ -4,7 +4,8 @@ import {
 	react_gists, 
 	resume_site, 
 	vscode_theme, 
-	js13k2021
+	js13k2021, 
+	docs_builder
 } from '../assets'
 
 export default function Home() {
@@ -21,14 +22,14 @@ export default function Home() {
 			</span>
 			
 			{[
-				// {
-				// 	title: '', 
-				// 	descr: '', 
-				// 	image: , 
-				// 	image_alt: '', 
-				// 	source: '', 
-				// 	demo: ''
-				// },
+				{
+					title: 'Docs Builder', 
+					descr: 'A tool built with NodeJS that builds one or many markdown docs into PDFs.', 
+					image: docs_builder, 
+					image_alt: 'Docs-builder github page.', 
+					source: 'https://github.com/xmagee/docs-builder', 
+					demo: 'https://github.com/xmagee/docs-builder'
+				},
 				{
 					title: 'Asteriods13k (js13k 2021)', 
 					descr: 'A game that I made for the js13k game jam', 

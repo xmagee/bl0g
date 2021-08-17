@@ -3,11 +3,13 @@ import react_gists from './react_gists.png'
 import resume_site from './resume_site.png'
 import vscode_theme from './vscode_theme.png'
 import js13k2021 from './13k_2021.png'
+import docs_builder from './docs_builder.png'
 
 export { 
     discord_bot, 
     react_gists, 
     resume_site, 
     vscode_theme, 
-    js13k2021
+    js13k2021, 
+    docs_builder
 }

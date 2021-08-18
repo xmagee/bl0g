@@ -14,7 +14,8 @@ export default function Blogs() {
             </span>
 
             <ul className='blog-ul'>
-                {[ // { link: '', title: '' }
+                {[
+                    { href: '/blog/3', title: 'documentation, javascript, rust, and more ?' },
                     { href: '/blog/2', title: 'blog improvements, maybe done?' },
                     { href: '/blog/1', title: 'testing' }, 
                 ].map((link, linkIndex) => (

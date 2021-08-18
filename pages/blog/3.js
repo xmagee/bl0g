@@ -1,0 +1,28 @@
+import { BlogDatebar } from '../../components'
+
+export default function Blog3() {
+    return (
+        <>
+            <BlogDatebar title='blog #3' date='Aug 18 2021' />
+            
+            <p>
+                Just finished up a small game for JS13kgames2021, I was going to add sound 
+                and polish it some more, but I started working on a Rust app, so I guess its
+                done for now lol.  Its *kind of* asteroids, the player just needs to pretend 
+                the squares look like asteroids :^).
+            </p>
+
+            <p>
+                Also new: make a script that generates PDF's from .md docs; It could be cool for 
+                making a bunch of documentation really quick, especially if the documentation is 
+                intended for non-technical people since they will just get the PDFs, no need to teach
+                anyone about markdown or README files.  
+            </p>
+
+            <p>
+                My next few projects will (probably) be made with Rust, I really want to mess around more
+                with that. Rocket seems cool, and Amethyst has been fun to use so far! 
+            </p>
+        </>
+    )
+}

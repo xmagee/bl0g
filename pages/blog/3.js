@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown'
 export default function Blog3() {
     return (
         <ReactMarkdown 
-        parserOptions={{ commonmark: true }} 
-        children={`
+            parserOptions={{ commonmark: true }} 
+            children={`
 ## blog #3 | Aug 18 2021
 
 Just finished up a small game for JS13kgames2021, I was going to add sound 
@@ -19,6 +19,6 @@ anyone about markdown or README files.
 
 My next few projects will (probably) be made with Rust, I really want to mess around more
 with that. Rocket seems cool, and Amethyst has been fun to use so far! 
-        `} />
+            `} />
     )
 }

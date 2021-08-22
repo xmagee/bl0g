@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown'
 export default function Blog2() {
     return (
         <ReactMarkdown 
-                parserOptions={{ commonmark: true }} 
-                children={`
+            parserOptions={{ commonmark: true }} 
+            children={`
 ## blog #2 | Aug 13 2021
 
 Made some changes, I think this is good now. I initially used

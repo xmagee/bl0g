@@ -15,6 +15,7 @@ export default function Blogs() {
 
             <ul className='blog-ul'>
                 {[
+                    { href: '/blog/4', title: 'this blog, now using markdown! 👋😲👋 💯💯💯' },
                     { href: '/blog/3', title: 'documentation, javascript, rust, and more ?' },
                     { href: '/blog/2', title: 'blog improvements, maybe done?' },
                     { href: '/blog/1', title: 'testing' }, 

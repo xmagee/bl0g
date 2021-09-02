@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown'
 
-export default function Blog3() {
+export default function Blog4() {
     return (
         <ReactMarkdown 
             parserOptions={{ commonmark: true }} 
             children={`
-## blog #4 | Aug 22 2021
+## blog #4 | Trying to use markdown 
 
 Decided to start usign md for the blog, using [this plugin](https://github.com/remarkjs/react-markdown).  Currently, the blog text is still just 
 in .js, but eventually I plan to have one reusable blog component, and load markdown in from individual files. I also added the .md support for 

@@ -1,12 +1,4 @@
 import Image from 'next/image'
-import { 
-	discord_bot,
-	react_gists, 
-	resume_site, 
-	vscode_theme, 
-	js13k2021, 
-	docs_builder
-} from '../assets'
 
 export default function Home() {
 	return (
@@ -25,7 +17,7 @@ export default function Home() {
 				{
 					title: 'Docs Builder', 
 					descr: 'A tool built with NodeJS that builds one or many markdown docs into PDFs.', 
-					image: docs_builder, 
+					image: 'https://images1.us-east-1.linodeobjects.com/docs_builder.png', 
 					image_alt: 'Docs-builder github page.', 
 					source: 'https://github.com/xmagee/docs-builder', 
 					demo: 'https://github.com/xmagee/docs-builder'
@@ -33,7 +25,7 @@ export default function Home() {
 				{
 					title: 'Asteriods13k (js13k 2021)', 
 					descr: 'A game that I made for the js13k game jam', 
-					image: js13k2021, 
+					image: 'https://images1.us-east-1.linodeobjects.com/13k_2021.png', 
 					image_alt: 'Asteriods game made with Javascript.', 
 					source: 'https://github.com/xmagee/13k-asteroids', 
 					demo: 'https://github.com/xmagee/13k-asteroids'
@@ -41,7 +33,7 @@ export default function Home() {
 				{
 					title: 'React Gists', 
 					descr: 'A simple React webapp that showcases Reactjs code snippets that are cool and/or useful.', 
-					image: react_gists, 
+					image: 'https://images1.us-east-1.linodeobjects.com/react_gists.png', 
 					image_alt: 'React Gists project screenshot of main screen.', 
 					source: 'https://github.com/xmagee/react-gists', 
 					demo: 'https://react-gists.netlify.app/'
@@ -49,7 +41,7 @@ export default function Home() {
 				{
 					title: 'Discord Bot', 
 					descr: 'A Discord server bot made with NodeJS and DiscordJS. It currently has some basic commands, more on the way. Coming soon: audio controls, image searching, fetching news articles.', 
-					image: discord_bot, 
+					image: 'https://images1.us-east-1.linodeobjects.com/discord_bot.png', 
 					image_alt: 'Discord bot source code screenshot.', 
 					source: 'https://github.com/xmagee/disco', 
 					demo: 'https://github.com/xmagee/disco'
@@ -57,7 +49,7 @@ export default function Home() {
 				{
 					title: 'VSCode Theme', 
 					descr: 'A dark theme for VSCode and VSCodium.', 
-					image: vscode_theme, 
+					image: 'https://images1.us-east-1.linodeobjects.com/vscode_theme.png', 
 					image_alt: 'Screenshot of vscode theme.', 
 					source: 'https://github.com/xmagee/xpcode', 
 					demo: 'https://marketplace.visualstudio.com/items?itemName=xmagee.xpcode'
@@ -65,7 +57,7 @@ export default function Home() {
 				{
 					title: 'Resume Site', 
 					descr: 'My official resume, hosted on Github pages.', 
-					image: resume_site, 
+					image: 'https://images1.us-east-1.linodeobjects.com/resume_site.png', 
 					image_alt: 'Screenshot of my resume site.', 
 					source: 'https://github.com/xmagee/xmagee.github.io', 
 					demo: 'https://alexmagee.com/'
@@ -82,7 +74,9 @@ export default function Home() {
 	
 					<Image 
 						src={project.image} 
-						alt={project.image_alt} />
+						alt={project.image_alt}
+						width='1000'
+						height='750' />
 					
 					<br />
 	

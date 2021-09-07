@@ -26,6 +26,5 @@ I am going to use the free Netlify hosting service for now,
 but I will probably throw this onto a Linode or something to 
 save money. 
             `} />
-
     )
 }

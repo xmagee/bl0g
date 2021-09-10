@@ -13,7 +13,7 @@ export default function App({ Component, props }) {
 					{ title: 'Home', href: '/' },
 					{ title: 'Blogs', href: '/blogs' },
 					{ title: 'Github', href: 'https://github.com/xmagee' },
-					{ title: 'Resume', href: 'https://alexmagee.com' },
+					{ title: 'Resume (PDF)', href: 'https://github.com/xmagee/resume/releases/download/2021.9.9.1/resume.pdf' },
 				].map((link, linkIndex) => (
 					<>
 						<Link key={linkIndex} href={link.href}>

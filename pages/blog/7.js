@@ -5,7 +5,7 @@ export default function Blog7() {
         <ReactMarkdown 
             parserOptions={{ commonmark: true }} 
             children={`
-## blog #6 | m3o
+## blog #7 | m3o
 
 I made a [quick NodeJS app](https://github.com/xmagee/m3o-api-test) to check out the endpoints offered by Micro (m3o). 
 I really like endpoints offered currently, I could see many of them being used in app development to save time

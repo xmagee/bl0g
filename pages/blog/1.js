@@ -1,8 +1,14 @@
 import ReactMarkdown from 'react-markdown'
+import Head from 'next/head'
 
 export default function Blog1() {
     return (
-        <ReactMarkdown 
+        <>
+            <Head>
+                <title>xmagee.com | Blog #1</title>
+            </Head>
+
+            <ReactMarkdown 
             parserOptions={{ commonmark: true }} 
             children={`
 ## blog #1 | Aug 10 2021
@@ -26,5 +32,7 @@ I am going to use the free Netlify hosting service for now,
 but I will probably throw this onto a Linode or something to 
 save money. 
             `} />
+        </>
+
     )
 }

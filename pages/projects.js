@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function Projects() { 
 	const projects = [
@@ -54,6 +55,10 @@ export default function Projects() {
 
     return (
 		<>
+			<Head>
+				<title>xmagee.com | Projects List</title>
+			</Head>
+
 			<span className='page-title-subtitle-container'>
 				<p>
 					<h4>Projects</h4>

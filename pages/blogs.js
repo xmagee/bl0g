@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function Blogs() {
     const blog_links = [
@@ -10,9 +11,13 @@ export default function Blogs() {
         { href: '/blog/2', title: 'blog improvements, maybe done?' },
         { href: '/blog/1', title: 'testing' }, 
     ]
-    
+
     return (
         <>
+            <Head>
+				<title>xmagee.com | Blogs List</title>
+			</Head>
+            
             <span className='page-title-subtitle-container'>
                 <p>
                     <h4>Blogs</h4>

@@ -24,10 +24,10 @@ export default function Home() {
 			<div className='spotify-section'>
 				<div className='spotify-weekly-title'>
 					<h3>
-						<u>Weekly Spotify Playlist</u>
+						<u>Highlight Spotify Playlist</u>
 					</h3>
 
-					<i>My fav. songs this week</i>
+					<i>Some pretty good songs <br /> (constantly updated)</i>
 				</div>
 				
 				<div className='spotify-weekly-container'>

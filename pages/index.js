@@ -9,9 +9,10 @@ export default function Home() {
 
 			<p>
 				Hi! I am a software developer from Pennsylvania, with a B.S. in Computer
-				Information Systems & Technology.  I enjoy all kinds of projects but 
-				professionally, I would call myself a 'web developer'; I typically lean on 
-				ReactJS to make front-ends, and ExpressJS to build web api's. 
+				Information Systems & Technology.  I enjoy all kinds of software projects 
+				but professionally, I am a web developer. Technologies I typically 
+				utilize in development are Javascript/NodeJS, ReactJS/NextJS, C#/VB.NET/.NET 
+				and Linux.
 			</p>
 
 			<p>

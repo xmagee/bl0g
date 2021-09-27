@@ -62,6 +62,6 @@ hr {
 
 .spotify-weekly-container {
     display: flex;
-    justify-content: right;
-    margin-top: -85px;
+    justify-content: left;
+    margin-top: 15px;
 }

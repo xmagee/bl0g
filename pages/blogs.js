@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 export default function Blogs() {
     const blog_links = [
+        { href: '/blog/8', title: 'update for december (part 1 of....? ?)' },
         { href: '/blog/7', title: '🌐 checkin\' out micro api stuff' }, 
         { href: '/blog/6', title: 'another month, another resume' },
         { href: '/blog/5', title: 'elementaryOS 6 is very cool' }, 

@@ -1,32 +1,48 @@
+import LogRocket from 'logrocket'
 import '../styles/globals.css'
 import Link from 'next/link'
+import { useState } from 'react'
+import { NAV_LINKS } from '../Constants'
 
-export default function App({ Component, props }) {
+LogRocket.init(process.env.LOGROCKET_KEY)
+
+export default function App({ Component, props, pageProps }) {
+	const [ currentPage, setCurrentPage ] = useState('home')
+		
 	return (
 		<>
-			<header className='site-header'>
-				<h1>./xmagee</h1>
+			<header>
+				<h1>
+					<a href='/'>./xmagee --page={String(currentPage.toLowerCase())}</a>
+				</h1>
+
+				<h2>
+					<i>Alex Magee's Blog/Portfolio/Social Media/Resume</i>
+				</h2>
+
+				<nav>
+					<ul>
+						{NAV_LINKS.map((link, linkIndex) => (
+							<li key={linkIndex}>
+								{link.target === '_self' ?
+									(
+										<Link href={link.href}>
+											{link.title}
+										</Link>
+									)
+									:
+									(
+										<a href={link.href} target={link.target}>
+											{link.title}
+										</a>
+									)}
+							</li>
+						))}
+					</ul>
+				</nav>
 			</header>
 
-			<nav className='main-navbar'>
-				{[
-					{ title: 'Home', href: '/' },
-					{ title: 'Blogs', href: '/blogs' },
-					{ title: 'Projects', href: '/projects' },
-					{ title: 'Github', href: 'https://github.com/xmagee' },
-					{ title: 'Resume (PDF)', href: 'https://github.com/xmagee/resume/releases/download/2021.9.9.1/resume.pdf' },
-				].map((link, linkIndex) => (
-					<>
-						<Link key={linkIndex} href={link.href}>
-							<a style={{ marginLeft: 5, marginRight: 5 }}>{link.title}</a>
-						</Link>
-
-						{linkIndex !== 4 && ('|')}
-					</>
-				))}
-			</nav>
-
-			<Component {...props} />
+			<Component {...pageProps} {...props} setCurrentPage={setCurrentPage} />
 		</>
 	)
 }

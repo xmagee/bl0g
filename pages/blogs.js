@@ -1,42 +1,37 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import { BASE_PAGE_TITLE, DATA_LOAD_ERROR_MESSAGE } from '../Constants'
+import { useEffect } from 'react'
+import fs from 'fs'
 
-export default function Blogs() {
-    const blog_links = [
-        { href: '/blog/8', title: 'update for december (part 1 of....? ?)' },
-        { href: '/blog/7', title: '🌐 checkin\' out micro api stuff' }, 
-        { href: '/blog/6', title: 'another month, another resume' },
-        { href: '/blog/5', title: 'elementaryOS 6 is very cool' }, 
-        { href: '/blog/4', title: 'this blog, now using markdown! 👋😲👋 💯💯💯' },
-        { href: '/blog/3', title: 'documentation, javascript, rust, and more ?' },
-        { href: '/blog/2', title: 'blog improvements, maybe done?' },
-        { href: '/blog/1', title: 'testing' }, 
-    ]
+export async function getServerSideProps() { 
+    const blogArr = fs.readdirSync('./mdblogs').reverse().map((e, i) => {
+        return e.replace('.md', '')
+    })
+
+    return { props: { mdblogs: blogArr } }
+}
+
+export default function Blogs({ setCurrentPage, mdblogs }) {
+    useEffect(() => {
+        setCurrentPage('blogs')
+    }, [])
 
     return (
         <>
             <Head>
-				<title>xmagee.com | Blogs List</title>
+				<title>{BASE_PAGE_TITLE} Alex's Blogs</title>
 			</Head>
             
-            <span className='page-title-subtitle-container'>
-                <p>
-                    <h4>Blogs</h4>
-                </p>
+            <h3>Here are my blogs, some of them may be interesting 😃</h3>
 
-                <p>
-                    SORT BY [BlogDate] DESC;
-                </p>
-            </span>
-
-            <ul className='blog-ul'>
-                {blog_links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                        <Link href={link.href}>
-                            <a>{link.title}</a>
-                        </Link>
-                    </li>
-                ))}
+            <ul className='blogs-list'>
+                {mdblogs.length < 1 ? (DATA_LOAD_ERROR_MESSAGE) :
+                    (mdblogs.map((id, iId) => (
+                        <li key={iId}>
+                            <Link href={`/blog/${id}`}>{`Blog #${id}`}</Link>
+                        </li>
+                    )))}
             </ul>
         </>
     )

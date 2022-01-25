@@ -13,3 +13,8 @@ my blog
 * `$ git clone https://github.com/xmagee/bl0g.git`
 * `$ cd bl0g && npm install`
 * `$ npm run build`
+
+### optional: use logrocket
+* create env file from `.env.local.example`: 
+    * `$ cat .env.local.example >> .env.local`
+* put your logging key in the file and run it :) 

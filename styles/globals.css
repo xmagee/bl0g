@@ -1,67 +1,76 @@
 @import '../node_modules/water.css/out/dark.css';
 
-/* * {
-    outline: 1px solid red;
-} */
-
-hr {
-    background-color: rgba(255, 255, 255, 0.25);
+* {
+    padding: 0;
+    margin: 0;
+    color: #dfd4c7;
+    /* outline: 1px solid #FF0000; */
 }
 
-.hr-with-margin {
-    margin-top: 25px;
+a {
+    cursor: pointer;
+    color: #dfd4c7;
+}
+
+h1, h2, h3, h4 {
+    color: #dfd4c7;
+}
+
+header {
+    outline: 1px solid #dfd4c7;
     margin-bottom: 25px;
+    user-select: none;
 }
 
-.site-header {
-    margin-bottom: 15px;
+header h1, 
+header h2 {
+    margin-left: 10px;
 }
 
-.main-navbar {
-    outline: 1px solid rgba(255, 255, 255, 0.25);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
+nav {
+    border-top: 1px solid #dfd4c7;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex; 
+    justify-content: left;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    padding: 10px 10px 10px 10px;
+    display: block;
+}
+
+nav ul li a:hover { 
+    text-decoration: none;
+    background-color:#dfd4c7;
+    color: #202B38;
 }
 
 .project-card {
-    outline: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 5px;
-    padding-top: 5px; 
-    padding-bottom: 5px;
-    padding-left: 5px; 
-    padding-right: 5px;
-    margin-bottom: 10px;
+    outline: 1px solid #dfd4c7;
+    padding: 0px 5px 5px 5px;
+    margin-bottom: 15;
 }
 
-.page-title-subtitle-container p {
-    display: flex;
-    justify-content: center;
+.project-card p {
+    margin-bottom: 5px;
 }
 
-.blog-ul {
-    list-style-type: '=> '
+.blogs-list {
+    margin: 0px 0px 0px 25px;
+    list-style-type: '=>';
 }
 
-.blog-datebar {
+.blogs-list li {
+    padding: 0px 0px 5px 10px;
+}
+
+.blogs-list li a:hover { 
     text-decoration: underline;
-    margin-top: 15px;
-}
-
-.spotify-section {
-    padding-top: 5px;
-    padding-bottom: 25px;
-}
-
-.spotify-weekly-title {
-    width: 300px;
-}
-
-.spotify-weekly-container {
-    display: flex;
-    justify-content: left;
-    margin-top: 15px;
 }

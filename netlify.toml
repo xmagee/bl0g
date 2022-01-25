@@ -1,0 +1,6 @@
+[build]
+    command = "next build"
+    publish = "out"
+
+[functions]
+    included_files = ["mdblogs/*.md"]

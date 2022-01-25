@@ -3,9 +3,10 @@ import Head from 'next/head'
 import { BASE_PAGE_TITLE, DATA_LOAD_ERROR_MESSAGE } from '../Constants'
 import { useEffect } from 'react'
 import fs from 'fs'
+import path from 'path'
 
 export async function getServerSideProps() { 
-    const blogArr = fs.readdirSync('./mdblogs').reverse().map((e, i) => {
+    const blogArr = fs.readdirSync(path.join(process.cwd(), 'mdblogs')).reverse().map((e, i) => {
         return e.replace('.md', '')
     })
 

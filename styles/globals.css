@@ -74,3 +74,13 @@ nav ul li a:hover {
 .blogs-list li a:hover { 
     text-decoration: underline;
 }
+
+.link-btn { 
+    background: transparent; 
+    padding: 0
+}
+
+.link-btn:hover { 
+    background: transparent; 
+    padding: 0
+}

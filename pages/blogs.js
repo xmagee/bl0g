@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { BASE_PAGE_TITLE, DATA_LOAD_ERROR_MESSAGE } from '../Constants'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import fs from 'fs'
 import path from 'path'
 
@@ -14,6 +14,8 @@ export async function getServerSideProps() {
 }
 
 export default function Blogs({ setCurrentPage, mdblogs }) {
+    const [ loadingBlog, setLoadingBlog ] = useState(false)
+
     useEffect(() => {
         setCurrentPage('blogs')
     }, [])
@@ -26,14 +28,20 @@ export default function Blogs({ setCurrentPage, mdblogs }) {
             
             <h3>Here are my blogs, some of them may be interesting 😃</h3>
 
-            <ul className='blogs-list'>
-                {mdblogs.length < 1 ? (DATA_LOAD_ERROR_MESSAGE) :
-                    (mdblogs.map((id, iId) => (
-                        <li key={iId}>
-                            <Link href={`/blog/${id}`}>{`Blog #${id}`}</Link>
-                        </li>
-                    )))}
-            </ul>
+            {loadingBlog ? ("Loading blog...")
+            : 
+            (
+                <ul className='blogs-list'>
+                    {mdblogs.length < 1 ? (DATA_LOAD_ERROR_MESSAGE) :
+                        (mdblogs.map((id, iId) => (
+                            <li key={iId}>
+                                <button className="link-btn" onClick={() => {setLoadingBlog(true)}}>
+                                    <Link href={`/blog/${id}`}>{`Blog #${id}`}</Link>
+                                </button>
+                            </li>
+                        )))}
+                </ul>
+            )}
         </>
     )
 }

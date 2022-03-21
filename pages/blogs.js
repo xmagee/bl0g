@@ -7,8 +7,10 @@ import path from 'path'
 
 export async function getServerSideProps() { 
     const blogArr = fs.readdirSync(path.join(process.cwd(), 'mdblogs')).reverse().map((e, i) => {
-        return e.replace('.md', '')
-    })
+        return parseInt(e.replace('.md', ''))
+    }).sort((a, b) => b - a)
+
+    //blogArr = blogArr.sort((a, b) => b - a)
 
     return { props: { mdblogs: blogArr } }
 }

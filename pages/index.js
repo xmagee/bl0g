@@ -13,7 +13,6 @@ function ProfileSection(props) {
   }
 
 export default function Home({ setCurrentPage }) {
-
 	useEffect(() => {
 		setCurrentPage('home')
 	}, [])
@@ -172,7 +171,16 @@ export default function Home({ setCurrentPage }) {
 				</ProfileSection>
 
 				<ProfileSection header="Projects / Published Work">
-					[TODO]
+					<div className="profile-skillslist">
+						<ul>
+							<li>
+								CASA Mckean website maintenance - <a href="https://casamckean.org" target="_blank">www.casamckean.org</a>
+							</li>
+							<li>
+								ReactJS gists - <a href="https://react-gists.netlify.app/" target="_blank">react-gists.netlify.app</a>
+							</li>
+						</ul>
+					</div>
 				</ProfileSection>
 			</div>
 		</>

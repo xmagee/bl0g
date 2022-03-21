@@ -82,16 +82,57 @@ export default function Home({ setCurrentPage }) {
 				<ProfileSection header="Professional Experience">
 					<ul className="profile-prolist">
 						<li>
-							<h4>position</h4>
-							<p>Company, LLC</p>
-							<i>date - date</i>
+							<h4>Software Developer I</h4>
+							<p>Seneca Resources</p>
+							<i>March 2022 - present</i>
 							<ul>
-								<li>a</li>
-								<li>b</li>
+								<li>
+									Developing applications for the .NET ecosystem using C#
+								</li>
+								<li>
+									SQL Server database development
+								</li>
 							</ul>
 						</li>
 						<li>
-
+							<h4>Contract Software Developer</h4>
+							<p>Self-employed</p>
+							<i>May 2020 - April 2022</i>
+							<ul>
+								<li>
+									Primarily developing web applications
+								</li>
+								<li>
+									Technologies/frameworks most used include C#, VB.NET, Javascript, ReactJS, NodeJS, Sql
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Programmer Intern</h4>
+							<p>American Refining Group</p>
+							<i>May 2019 - May 2020</i>
+							<ul>
+								<li>
+									Worked on internal ASP.NET sites using VB.NET, C#, Sql
+								</li>
+								<li>
+									Made changes to Wordpress training site 
+								</li>
+								<li>
+									Created an I.T. inventory management webapp using React, C#/.NET 5, Sql
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h4>QA Intern</h4>
+							<p>Graham Packaing</p>
+							<i>August 2018 - April 2019</i>
+							<ul>
+								<li>
+									Tested production line product samples for consistancy, logged measurements and results		
+								</li>
+								<li>Compared results to historical data </li>
+							</ul>
 						</li>
 					</ul>
 				</ProfileSection>

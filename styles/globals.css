@@ -140,7 +140,7 @@ nav ul li a:hover {
 
 .profile-prolist { 
     list-style-type: none;
-
+    margin-top: -15px;
 }
 
 .profile-prolist li p { 

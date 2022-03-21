@@ -130,10 +130,24 @@ nav ul li a:hover {
     padding-top: 2px; 
 }
 
-.profile-skillslist { 
+.profile-skillslist ul { 
     list-style-type: "► ";
 }
 
-.profile-skillslist-container { 
+.profile-skillslist { 
     margin-left: 15px;
+}
+
+.profile-prolist { 
+    list-style-type: none;
+
+}
+
+.profile-prolist li p { 
+    margin-top: -10px;
+}
+
+.profile-prolist ul { 
+    margin-left: 20px;
+    list-style-type: " - ";
 }

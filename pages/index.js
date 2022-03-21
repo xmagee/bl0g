@@ -2,6 +2,16 @@ import Head from 'next/head'
 import { BASE_PAGE_TITLE } from '../Constants'
 import { useEffect } from 'react'
 
+function ProfileSection(props) {
+	const { header, children } = props;
+	return (
+	  	<div className="profile-section">
+			<h3>{header}</h3>
+			<p>{children}</p>
+		</div>
+	)
+  }
+
 export default function Home({ setCurrentPage }) {
 
 	useEffect(() => {
@@ -53,10 +63,9 @@ export default function Home({ setCurrentPage }) {
 					</p>
 				</div>
 
-				<div className="profile-section">
-					<h3>Skills</h3>
-					<p className="profile-skillslist-container">
-						<ul className="profile-skillslist">
+				<ProfileSection header="Skills">
+					<div className="profile-skillslist">
+						<ul>
 							<li>
 								C#, Javascript, VB.NET, MSSQL, MySql, SqLite, Rust, PHP
 							</li>
@@ -67,36 +76,37 @@ export default function Home({ setCurrentPage }) {
 								ReactJS, WPF, Winforms/Webforms, NextJS, Wordpress
 							</li>
 						</ul>
-					</p>
-				</div>
+					</div>
+				</ProfileSection>
 
-				<div className='profile-section'>
-					<h3>Professional Experience</h3>
-					<p>
-						
-					</p>
-				</div>
+				<ProfileSection header="Professional Experience">
+					<ul className="profile-prolist">
+						<li>
+							<h4>position</h4>
+							<p>Company, LLC</p>
+							<i>date - date</i>
+							<ul>
+								<li>a</li>
+								<li>b</li>
+							</ul>
+						</li>
+						<li>
 
-				<div className='profile-section'>
-					<h3>Education</h3>
-					<p>
+						</li>
+					</ul>
+				</ProfileSection>
 
-					</p>
-				</div>
+				<ProfileSection header="Education">
+					[TODO]
+				</ProfileSection>
 
-				<div className='profile-section'>
-					<h3>Clubs / Organizations</h3>
-					<p>
+				<ProfileSection header="Clubs / Organizations">
+					[TODO]
+				</ProfileSection>
 
-					</p>
-				</div>
-
-				<div className='profile-section'>
-					<h3>Projects / Published Work</h3>
-					<p>
-
-					</p>
-				</div>
+				<ProfileSection header="Projects / Published Work">
+					[TODO]
+				</ProfileSection>
 			</div>
 		</>
 	)

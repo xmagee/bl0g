@@ -52,14 +52,8 @@ nav ul li a:hover {
     color: #202B38;
 }
 
-.project-card {
-    outline: 1px solid #dfd4c7;
-    padding: 0px 5px 5px 5px;
-    margin-bottom: 15;
-}
-
-.project-card p {
-    margin-bottom: 5px;
+.text-half-opac { 
+    color: rgba(223, 212, 199, 0.5);
 }
 
 .blogs-list {
@@ -83,4 +77,63 @@ nav ul li a:hover {
 .link-btn:hover { 
     background: transparent; 
     padding: 0
+}
+
+.profile-header-section { 
+    outline: 1px solid rgba(223, 212, 199, 0.2);
+    margin-bottom: 10px;
+}
+
+.profile-header { 
+    padding-left: 30px;
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    height: 215px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Beautiful_Meadow_in_Yellowstone_National_Park.JPG/2560px-Beautiful_Meadow_in_Yellowstone_National_Park.JPG");
+}
+
+.profile-image { 
+    width: 200px;
+    height: 200px;
+    outline: 5px solid #dfd4c7;
+    border-radius: 200px; 
+    margin-top: 50px;
+    -webkit-box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.3);
+}
+
+.profile-header-details { 
+    padding-left: 15px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.profile-header-details h2 { 
+    margin-bottom: -3px;
+}
+
+.profile-section { 
+    outline: 1px solid rgba(223, 212, 199, 0.2);
+    margin-bottom: 10px;
+    padding: 5px 15px 25px 30px;
+}
+
+.profile-section h3 { 
+    margin-bottom: 1px;
+}
+
+.image-attrib { 
+    font-size: 10px; 
+    float: right; 
+    padding-top: 2px; 
+}
+
+.profile-skillslist { 
+    list-style-type: "► ";
+}
+
+.profile-skillslist-container { 
+    margin-left: 15px;
 }

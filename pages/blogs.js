@@ -10,8 +10,6 @@ export async function getServerSideProps() {
         return parseInt(e.replace('.md', ''))
     }).sort((a, b) => b - a)
 
-    //blogArr = blogArr.sort((a, b) => b - a)
-
     return { props: { mdblogs: blogArr } }
 }
 

@@ -13,7 +13,7 @@ export default function App({ Component, props, pageProps }) {
 		<>
 			<header>
 				<h1>
-					<a href='/'>./xmagee --page={String(currentPage.toLowerCase())}</a>
+					<a href='/'>./xmagee <span className="current-page-text">--page={String(currentPage.toLowerCase())}</span></a>
 				</h1>
 
 				<h2>

@@ -10,7 +10,7 @@ function ProfileSection(props) {
 			<p>{children}</p>
 		</div>
 	)
-  }
+}
 
 export default function Home({ setCurrentPage }) {
 	useEffect(() => {

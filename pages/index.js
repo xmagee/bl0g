@@ -138,11 +138,37 @@ export default function Home({ setCurrentPage }) {
 				</ProfileSection>
 
 				<ProfileSection header="Education">
-					[TODO]
-				</ProfileSection>
-
-				<ProfileSection header="Clubs / Organizations">
-					[TODO]
+					<ul className="profile-prolist">
+						<li>
+							<h4>Bachelors of Science (B.S.), Computer Information Systems & Technology</h4>
+							<p>University of Pittsburgh</p>
+							<i>September 2016 – April 2020</i>
+							<ul>
+								<li>
+									President, I.T. Club
+								</li>
+								<li>
+									Treasurer / Webmaster, Esports club
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h4>High School Diploma</h4>
+							<p>Bradford Area High School, Bradford, PA</p>
+							<i>September 2012 – June 2016</i>
+							<ul>
+								<li>
+									A+ Certification (2016), NOCTII skills certification 
+								</li>
+								<li>
+									SkillsUSA competitor, I.T. 
+								</li>
+								<li>
+									Completed 3 yrs. of Computer Maintenance skills program
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</ProfileSection>
 
 				<ProfileSection header="Projects / Published Work">

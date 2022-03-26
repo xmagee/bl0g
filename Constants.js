@@ -20,7 +20,7 @@ NAV_LINKS = [
     },
     {
         "title": "Resume (PDF)", 
-        "href": "https://github.com/xmagee/resume/releases/download/2022.3.20.1/resume.pdf", 
+        "href": "https://github.com/xmagee/resume/releases/download/2022.3.26.1/resume.pdf", 
         "target": "_blank"
     }, 
 ]

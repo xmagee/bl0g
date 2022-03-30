@@ -1,14 +1,39 @@
 //import LogRocket from 'logrocket'
 import '../styles/globals.css'
 import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { NAV_LINKS } from '../Constants'
+import Router from "next/router";
 
 //LogRocket.init(process.env.LOGROCKET_KEY)
 
 export default function App({ Component, props, pageProps }) {
-	const [ currentPage, setCurrentPage ] = useState('home')
-		
+	const [ currentPage, setCurrentPage ] = useState('home'),
+		[ loading, setLoading ] = useState(false)
+
+	React.useEffect(() => {
+		const start = () => {
+			console.log("start");
+			setLoading(true);
+		}
+
+		const end = () => {
+			console.log("findished");
+			setLoading(false);
+		}
+
+		Router.events.on("routeChangeStart", start)
+		Router.events.on("routeChangeComplete", end)
+		Router.events.on("routeChangeError", end)
+
+		return () => {
+			Router.events.off("routeChangeStart", start)
+			Router.events.off("routeChangeComplete", end)
+			Router.events.off("routeChangeError", end)
+		};
+	}, []);
+
+
 	return (
 		<>
 			<header>
@@ -42,7 +67,7 @@ export default function App({ Component, props, pageProps }) {
 				</nav>
 			</header>
 
-			<Component {...pageProps} {...props} setCurrentPage={setCurrentPage} />
+			{loading ? ("Loading...") : (<Component {...pageProps} {...props} setCurrentPage={setCurrentPage} /> )}
 		</>
 	)
 }

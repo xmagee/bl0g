@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://xmagee.com
+
+# Sitemaps
+Sitemap: https://xmagee.com/sitemap.xml

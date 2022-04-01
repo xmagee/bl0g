@@ -17,18 +17,17 @@ export async function getServerSideProps(context) {
         return true
     }
 
-    const blogText = fs.readFileSync(`./mdblogs/${requestedBlogid}.md`, 'utf8')
+    const blogText = fs.readFileSync(`./mdblogs/${requestedBlogid}`, 'utf8')
 
     return { props: { blogText: blogText } }
 }
-
 
 export default function Blog({ setCurrentPage, blogText }) {
     const router = useRouter(), 
         { blogid } = router.query
 
     useEffect(() => {
-        setCurrentPage(`blogs --blogid=${blogid}`)
+        setCurrentPage(`blogs --blogid=${blogid.split('.md')[0]}`)
     }, [])
 
     return (

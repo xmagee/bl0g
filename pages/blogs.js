@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { BASE_PAGE_TITLE, DATA_LOAD_ERROR_MESSAGE } from '../Constants'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import fs from 'fs'
 import path from 'path'
 
 export async function getServerSideProps() { 
-    const blogArr = fs.readdirSync(path.join(process.cwd(), 'mdblogs')).reverse().map((e, i) => {
-        return parseInt(e.replace('.md', ''))
-    }).sort((a, b) => b - a)
+    const blogArr = fs.readdirSync(path.join(
+        process.cwd(), 'mdblogs')
+    )
+        .sort((a, b) =>  { return a - b })
+        .reverse()
 
     return { props: { mdblogs: blogArr } }
 }
@@ -30,7 +32,7 @@ export default function Blogs({ setCurrentPage, mdblogs }) {
                 {mdblogs.length < 1 ? (DATA_LOAD_ERROR_MESSAGE) :
                     (mdblogs.map((id, iId) => (
                         <li key={iId}>
-                            <Link href={`/blog/${id}`}>{`Blog #${id}`}</Link>
+                            <Link href={`/blog/${id}`}>{`${id.split('.md')[0]}`}</Link>
                         </li>
                     )))}
             </ul>
